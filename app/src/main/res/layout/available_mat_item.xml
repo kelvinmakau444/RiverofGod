@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardView="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/tbl_border"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:id="@+id/third_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        cardView:cardCornerRadius="2dp"
+        cardView:cardBackgroundColor="@android:color/white">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_weight="0.8"
+                android:padding="10dp"
+                android:src="@drawable/van"
+                android:layout_width="0dp"
+                android:layout_height="120dp" />
+            <ImageView
+                android:id="@+id/driver_pic"
+                android:padding="10dp"
+                app:srcCompat="@drawable/profile"
+                android:layout_width="120dp"
+                android:layout_height="120dp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/holo_purple"
+            android:padding="2dp"
+            android:id="@+id/car_plate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car Plate No. : KAA 1964"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="9dp" />
+
+        <TextView
+            android:textColor="@android:color/holo_purple"
+            android:padding="2dp"
+            android:id="@+id/car_available_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available seats : 4"
+            android:layout_below="@+id/car_plate"
+            android:layout_alignLeft="@+id/car_plate"
+            android:layout_alignStart="@+id/car_plate" />
+
+        <TextView
+            android:textColor="@android:color/holo_purple"
+            android:padding="2dp"
+            android:id="@+id/car_driver_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver : Joshua Nderitu"
+            android:layout_below="@+id/car_available_seats"
+            android:layout_alignLeft="@+id/car_plate"
+            android:layout_alignStart="@+id/car_plate" />
+
+
+
+        <TextView
+            android:textColor="@android:color/holo_purple"
+            android:padding="2dp"
+            android:id="@+id/car_driver_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver Id : RoG1560"
+            android:layout_below="@+id/car_driver_names"
+            android:layout_alignLeft="@+id/car_driver_names"
+            android:layout_alignStart="@+id/car_driver_names" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/book_now_btn"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="Book Now"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
