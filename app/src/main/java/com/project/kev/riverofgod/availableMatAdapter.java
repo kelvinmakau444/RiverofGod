@@ -45,7 +45,7 @@ public class availableMatAdapter extends RecyclerView.Adapter<availableMatAdapte
         public myViewHolder(View itemView) {
             super(itemView);
 
-            driver_pic=(ImageView)itemView.findViewById(R.id.driver_pic);
+           // driver_pic=(ImageView)itemView.findViewById(R.id.driver_pic);
             plate=(TextView)itemView.findViewById(R.id.car_plate);
             available_seats=(TextView)itemView.findViewById(R.id.car_available_seats);
             driver=(TextView)itemView.findViewById(R.id.car_driver_names);
@@ -104,7 +104,7 @@ public class availableMatAdapter extends RecyclerView.Adapter<availableMatAdapte
         holder.driver.setText("Driver: "+newMat.driver);
         holder.driver_id.setText("Driver Id: "+newMat.driver_id);
 
-        Glide.with(context).load(newMat.driver_image).diskCacheStrategy(DiskCacheStrategy.ALL).dontAnimate().placeholder(R.drawable.loader).error(R.drawable.profile).override(200,100).into(holder.driver_pic);
+       // Glide.with(context).load(newMat.driver_image).diskCacheStrategy(DiskCacheStrategy.ALL).dontAnimate().placeholder(R.drawable.loader).error(R.drawable.profile).override(200,100).into(holder.driver_pic);
 
     }
 
