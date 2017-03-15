@@ -1,18 +1,392 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_select_car"
-    android:orientation="vertical"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/seatLegendLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip" >
 
-    tools:context="com.project.kev.riverofgod.SelectCarSeat">
-
-    <LinearLayout
-    android:orientation="horizontal"
+<TextView
+    android:layout_marginBottom="5dp"
+    android:text="Select a seat to continue"
+    android:textSize="16sp"
+    android:textColor="@android:color/black"
+    android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/legend"
+                    android:layout_marginBottom="4dp"
+                    android:padding="2dp"
+                    android:background="@drawable/tbl_border"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                        <Button
+                            android:layout_weight="1"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginRight="2dp"
+                            android:clickable="false"
+                            android:padding="4dp"
+                            android:background="@color/colorReserved"
+                            android:checked="false"
+                            android:text="Reserved"
+                            android:textColor="@color/colorAvailable"
+                            android:id="@+id/reservedImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                    <Button
+                        android:layout_weight="1"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:clickable="false"
+                        android:padding="4dp"
+                        android:background="@color/colorAvailable"
+                        android:checked="false"
+                        android:text="Available"
+                        android:id="@+id/availableImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <Button
+                        android:layout_weight="1"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:clickable="false"
+                        android:padding="4dp"
+                        android:background="@color/colorSelected"
+                        android:checked="false"
+                        android:text="Selected"
+                        android:textColor="@color/colorAvailable"
+                        android:id="@+id/selectedImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
 
 
-</LinearLayout>
-</LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tblRL"
+                 >
+
+                <TableLayout
+                    android:background="@drawable/tbl_border"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tableLayout">
+                    <TableRow
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/colorAvailable"
+                            android:id="@+id/one_a"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/one_b"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+
+                        <ImageView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            app:srcCompat="@drawable/ic_steering"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="22dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/two_a"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/two_b"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/two_c"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="36dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/three_a"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/three_b"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+
+
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/three_c"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="22dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/four_a"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+                        <CheckBox
+                            android:background="@color/colorAvailable"
+                            android:layout_weight="1"
+                            android:id="@+id/four_b"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+
+
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/four_c"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="22dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/five_a"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/five_b"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+
+
+                        <CheckBox
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:id="@+id/five_c"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:drawableLeft="@drawable/seat_one"
+                            android:drawableStart="@drawable/seat_one"/>
+                    </TableRow>
+                    <LinearLayout
+                        android:background="@drawable/tbl_border"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:id="@+id/seatsLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+
+                                android:padding="10dp"
+                                android:id="@+id/seatsSelectedText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Seats:"
+                                android:textColor="@android:color/black"
+                                android:textSize="15.0sp" />
+
+                            <TextView
+                                android:padding="8dp"
+                                android:id="@+id/seats_selected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="18.0sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            >
+                            <TextView
+
+                                android:padding="10dp"
+                                android:id="@+id/fareText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fare:"
+                                android:textColor="@android:color/black"
+                                android:textSize="15.0sp" />
+
+                            <TextView
+                                android:padding="8dp"
+                                android:id="@+id/fare"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="18.0sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/confirm_btn"
+                        android:background="@android:color/black"
+                        android:text="CONFIRM SELECTION"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                </TableLayout>
+
+
+            </RelativeLayout>
+    <View
+        android:id="@+id/snack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/contLayout"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <Button
+            android:onClick="resetSelections"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_gravity="start"
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="CANCEL"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+
+        <Button
+            android:onClick="ContinueToPay"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_gravity="end"
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="CONTINUE"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+   </ScrollView>

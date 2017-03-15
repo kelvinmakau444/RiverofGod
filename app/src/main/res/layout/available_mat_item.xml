@@ -21,17 +21,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_weight="0.8"
-                android:padding="10dp"
-                android:src="@drawable/van"
-                android:layout_width="0dp"
-                android:layout_height="120dp" />
+                android:layout_weight="1"
+                android:src="@drawable/rog_mat"
+                android:layout_width="165dp"
+                android:layout_height="155dp" />
+
             <ImageView
+                android:layout_weight="1"
                 android:id="@+id/driver_pic"
                 android:padding="10dp"
                 app:srcCompat="@drawable/profile"
-                android:layout_width="120dp"
-                android:layout_height="120dp" />
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 

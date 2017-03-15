@@ -25,7 +25,11 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
-        <activity android:name=".SelectCarSeat"
+        <activity
+            android:name=".SelectCarSeat"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".PaymentActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>

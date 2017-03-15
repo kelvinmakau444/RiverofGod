@@ -2,7 +2,6 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:background="@color/colorPrimaryDark"
     android:id="@+id/relative_layout_item_count"
     android:layout_height="wrap_content"
     android:clickable="true"
@@ -32,7 +31,6 @@
             </Button>
         </RelativeLayout>
         <TextView
-            android:text="5"
             android:id="@+id/notif_count"
             android:gravity="center"
             android:padding="2dp"
